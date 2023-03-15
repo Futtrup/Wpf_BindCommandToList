@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.33423.255
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wpf_BindCommandToListBoxItem", "Wpf_BindCommandToListBoxItem\Wpf_BindCommandToListBoxItem.csproj", "{0DD0E84C-5279-400D-AD20-A6B512BDF0EC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0DD0E84C-5279-400D-AD20-A6B512BDF0EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DD0E84C-5279-400D-AD20-A6B512BDF0EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DD0E84C-5279-400D-AD20-A6B512BDF0EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DD0E84C-5279-400D-AD20-A6B512BDF0EC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {381FAA25-C80D-4087-B483-4C4ADA1E9523}
+	EndGlobalSection
+EndGlobal
