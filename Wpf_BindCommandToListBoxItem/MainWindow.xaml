@@ -4,9 +4,57 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Wpf_BindCommandToListBoxItem"
+        xmlns:vm="clr-namespace:Wpf_BindCommandToListBoxItem.ViewModels"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="MainWindow" Height="350" Width="400">
+    
+    <Window.DataContext>
+        <vm:MainViewModel />
+    </Window.DataContext>
+    
+    <StackPanel>
+        <ListBox SelectedItem="{Binding SelectedItem}">
+
+            <ListBoxItem>List Item One</ListBoxItem>
+            <ListBoxItem>List Item Two</ListBoxItem>
+            <ListBoxItem>List Item Three</ListBoxItem>
+
+            <ListBox.ItemContainerStyle>
+                <Style TargetType="{x:Type ListBoxItem}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type ListBoxItem}">
+                                <Button
+                                    Background="Transparent"
+                                    Height="20"
+                                    BorderThickness="0"
+                                    HorizontalContentAlignment="Left"
+
+                                    Command="{Binding SelectCommand}"
+                                    CommandParameter="{Binding SelectedItem}"
+
+                                    >
+                                    <ContentPresenter></ContentPresenter>
+                                </Button>
+                                <!--Command="{Binding RelativeSource={
+                                        RelativeSource AncestorType=ListBox},
+                                        Path=DataContext.SelectCommand}"-->
+                                <!--CommandParameter="{Binding RelativeSource={
+                                        RelativeSource AncestorType=ListBox},
+                                        Path=SelectedItem}"-->
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsKeyboardFocusWithin" Value="True">
+                            <Setter Property="IsSelected" Value="True"></Setter>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </ListBox.ItemContainerStyle>
+            
+
+        </ListBox>
+    </StackPanel>
+    
 </Window>
